@@ -1,0 +1,30 @@
+var output = [];
+
+function fibonacciProblem (inputValue) {
+    if(inputValue <= 2)
+    {
+        if(inputValue === 1)
+        {
+            output.push(0);
+            console.log(output);
+        }
+        else if(inputValue === 2)
+        {
+            output.push(0,1);
+            console.log(output);
+        }
+    }
+    else 
+    {
+        output.push(0,1);
+        for(let i = 0; i <= inputValue; i++)
+            {
+                var result = output[output.length - 1] + output[output.length - 2];
+                output.push(result);
+            }
+    }
+    console.log(output);
+    
+}
+
+fibonacciProblem(50);
